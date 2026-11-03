@@ -1,0 +1,30 @@
+{
+  "name": "yangao-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 13000",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 13000",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "next": "16.4.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "lucide-react": "1.67.0",
+    "tailwindcss": "4.3.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.4",
+    "typescript": "6.0.3",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.4",
+    "vitest": "5.1.0"
+  }
+}

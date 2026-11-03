@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>研稿 · 阶段2-2验收</title><link rel="stylesheet" href="/ui.css"><script defer src="/ui.js"></script></head>
+<body><header><h1>研稿</h1><span>阶段 2-2 · 临时验收工具</span></header>
+<main><p class="notice">验证资料、大纲、全文和 Word 导出。仅使用公开或合成资料；原始评测未完成，生成稿供验收与人工核对。</p>
+<p id="config" role="status">正在检查模型配置…</p><p id="message" role="alert" aria-live="polite"></p>
+<section><h2>1. 资料库</h2><p>只上传一个业务项目的公开或合成资料。PDF / docx / md / txt，每份最大 100 MB，一批最多 10 份；扫描件不做 OCR。</p>
+<form id="upload"><input id="files" type="file" multiple required accept=".pdf,.docx,.md,.txt" aria-label="选择资料"><button>上传并处理</button></form><div id="documents"></div>
+<form id="search"><label>检查检索来源 <input name="query" required maxlength="1000" placeholder="例如：项目建设必要性"></label><button>检索</button></form><div id="hits"></div></section>
+<section><h2>2. 创建报告</h2><form id="create"><label>报告标题<input name="title" required maxlength="200" placeholder="氢能示范项目可行性研究报告"></label><label>目标字数<input name="target_words" type="number" value="12000" min="8" max="18000" required></label><label>补充要求<textarea name="user_requirements" maxlength="2000"></textarea></label><button>创建报告</button></form></section>
+<section><h2>3. 报告与大纲</h2><div id="reports"></div><div id="editor" hidden><h3 id="report-title"></h3><p id="report-status"></p><div class="actions"><button id="generate">生成 / 重新生成大纲</button><button id="reload">重新载入</button></div><p id="task-status" role="status"></p><p id="notices"></p><div id="chapters"></div><div class="actions"><button id="add">增加一章</button><strong id="total"></strong><button id="save">保存修改</button><button id="confirm">确认大纲</button></div><p id="confirmed"></p></div></section>
+<section id="writing" hidden><h2>4. 全文与导出</h2><div class="actions"><button id="write-full">写全文</button><a id="download" hidden>下载 Word 草稿</a></div><p id="writing-progress" role="status"></p><p id="writing-summary"></p><p id="writing-notices"></p><p>带有待人工或待补充的稿件可以编辑、保存、导出；导出不代表达到研究员试用标准。修改后显示的审计仍是生成时记录。</p><div id="chapter-list"></div><div id="reader" hidden><h3 id="chapter-heading"></h3><p id="chapter-info"></p><div id="audit"></div><div id="body-preview"></div><details><summary>编辑本章正文</summary><label>本章正文<textarea id="body-editor" rows="20"></textarea></label><p id="edit-count"></p><button id="save-body">保存正文</button></details><details><summary>本章参考资料</summary><div id="references"></div></details></div></section>
+<footer id="budget"></footer></main></body></html>
