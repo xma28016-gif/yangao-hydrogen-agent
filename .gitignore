@@ -1,0 +1,21 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+# Runtime data and generated evidence
+/data/
+/docs/
+# Dependencies and build output
+.venv/
+node_modules/
+.next/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.tsbuildinfo
+coverage/
+.DS_Store
+# Generated agent and design instructions
+AGENTS.md
+CLAUDE.md
+DESIGN.md
